@@ -495,14 +495,34 @@ section{
 }
 
 @media(max-width:900px){
-  .nav{padding:12px 5%}
-  .navlinks{gap:12px}
-  .navlinks a:not(.contact){display:none}
-  .hero,.split,.contact{grid-template-columns:1fr}
-  .hero{padding:60px 7%}
-  .planet-wrap{margin-top:35px}
-  .cards,.project-grid{grid-template-columns:1fr 1fr}
-  .stats{grid-template-columns:1fr 1fr}
+  .nav{
+    padding:12px 5%;
+    position:relative;
+  }
+  .navlinks{
+    gap:12px;
+  }
+  /* MOSTRAR TODOS LOS ENLACES */
+  .navlinks a:not(.contact){
+    display:block;
+  }
+  .hero,
+  .split,
+  .contact{ grid-template-columns:1fr;
+  }
+  .hero{
+    padding:60px 7%;
+  }
+  .planet-wrap{
+    margin-top:35px;
+  }
+  .cards,
+  .project-grid{
+    grid-template-columns:1fr;
+  }
+  .stats{
+    grid-template-columns:1fr 1fr;
+  }
 }
 
 @media(max-width:600px){
@@ -4638,4 +4658,87 @@ body.space > * {
 
         top: calc(100% + 10px);
     }
+}
+/* =========================
+   MENÚ HAMBURGUESA
+========================= */
+
+.menu-toggle{
+  display:none;
+  width:46px;
+  height:46px;
+  border:none;
+  background:transparent;
+  cursor:pointer;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:5px;
+}
+
+.menu-toggle span{
+  display:block;
+  width:25px;
+  height:3px;
+  border-radius:3px;
+  background:currentColor;
+  transition:0.3s;
+}
+
+@media(max-width:900px){
+
+  .nav{
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+
+  .menu-toggle{
+    display:flex;
+    position:relative;
+    z-index:1001;
+  }
+
+  .navlinks{
+    position:absolute;
+    top:100%;
+    right:0;
+    width:220px;
+    padding:15px;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    background:inherit;
+
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(-10px);
+    transition:0.3s;
+    z-index:1000;
+  }
+
+  .navlinks.active{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+  }
+
+  .navlinks a{
+    display:block !important;
+    width:100%;
+  }
+
+  /* Animación del ☰ a ✕ */
+  .menu-toggle.active span:nth-child(1){
+    transform:translateY(8px) rotate(45deg);
+  }
+
+  .menu-toggle.active span:nth-child(2){
+    opacity:0;
+  }
+
+  .menu-toggle.active span:nth-child(3){
+    transform:translateY(-8px) rotate(-45deg);
+  }
 }
