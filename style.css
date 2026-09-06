@@ -4380,315 +4380,49 @@ body.space > * {
     }
 }
 /* =========================================
-   📱 MENÚ HAMBURGUESA NOVA TECH
-   ========================================= */
-
-/* Botón hamburguesa */
-.menu-toggle {
-    display: none;
-
-    width: 46px;
-    height: 46px;
-
-    border: 1px solid rgba(166, 76, 255, .45);
-    border-radius: 14px;
-
-    background: rgba(123, 44, 255, .10);
-
-    cursor: pointer;
-
-    padding: 10px;
-
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    gap: 5px;
-
-    transition: .25s ease;
-}
-
-/* Las tres líneas */
-.menu-toggle span {
-    display: block;
-
-    width: 22px;
-    height: 2px;
-
-    background: white;
-
-    border-radius: 5px;
-
-    transition: .3s ease;
-}
-
-
-/* Efecto al tocar */
-.menu-toggle:hover {
-    background: rgba(123, 44, 255, .25);
-    border-color: #8d3cff;
-}
-
-
-/* =========================================
-   📱 CELULARES
-   ========================================= */
-
-@media (max-width: 900px) {
-
-    .nav {
-        position: relative;
-
-        width: 100%;
-
-        padding: 10px 5%;
-
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-
-        gap: 12px;
-    }
-
-
-    /* Marca */
-    .brand {
-        min-width: 0;
-
-        flex: 1;
-
-        gap: 8px;
-    }
-
-
-    .logo-img {
-        width: 72px;
-        max-width: 72px;
-
-        height: auto;
-
-        flex-shrink: 0;
-    }
-
-
-    .brand strong {
-        font-size: 17px;
-    }
-
-
-    .brand small {
-        font-size: 6px;
-
-        letter-spacing: .8px;
-    }
-
-
-    /* Mostrar hamburguesa */
-    .menu-toggle {
-        display: flex;
-
-        flex-shrink: 0;
-
-        position: relative;
-
-        z-index: 1001;
-    }
-
-
-    /*
-       IMPORTANTE:
-       anulamos la regla anterior que ocultaba
-       los enlaces individualmente
-    */
-    .navlinks a:not(.contact) {
-        display: block;
-    }
-
-
-    /* Menú cerrado */
-    .navlinks {
-        position: absolute;
-
-        top: calc(100% + 12px);
-        left: 5%;
-        right: 5%;
-
-        display: flex;
-
-        flex-direction: column;
-
-        align-items: stretch;
-
-        gap: 5px;
-
-        padding: 12px;
-
-        background: rgba(5, 3, 10, .97);
-
-        border: 1px solid rgba(166, 76, 255, .35);
-
-        border-radius: 20px;
-
-        box-shadow:
-            0 20px 50px rgba(0, 0, 0, .55),
-            0 0 35px rgba(123, 44, 255, .10);
-
-        backdrop-filter: blur(15px);
-        -webkit-backdrop-filter: blur(15px);
-
-        opacity: 0;
-        visibility: hidden;
-
-        transform: translateY(-10px);
-
-        transition:
-            opacity .25s ease,
-            transform .25s ease,
-            visibility .25s ease;
-
-        z-index: 1000;
-    }
-
-
-    /* Menú abierto */
-    .navlinks.active {
-        opacity: 1;
-
-        visibility: visible;
-
-        transform: translateY(0);
-    }
-
-
-    /* Enlaces */
-    .navlinks a {
-        width: 100%;
-
-        padding: 14px 16px;
-
-        border-radius: 12px;
-
-        font-size: 14px;
-
-        text-decoration: none;
-
-        color: #d6d0df;
-
-        transition: .2s ease;
-    }
-
-
-    /* Efecto al tocar un enlace */
-    .navlinks a:hover {
-        background: rgba(123, 44, 255, .12);
-
-        color: white;
-    }
-
-
-    /* Botón Hablemos */
-    .navlinks .contact {
-        width: 100%;
-
-        margin-top: 5px;
-
-        padding: 13px 16px;
-
-        text-align: center;
-
-        border-radius: 30px;
-    }
-
-
-    /* =====================================
-       ANIMACIÓN DEL ☰ → X
-       ===================================== */
-
-    .menu-toggle.active span:nth-child(1) {
-        transform: translateY(7px) rotate(45deg);
-    }
-
-    .menu-toggle.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .menu-toggle.active span:nth-child(3) {
-        transform: translateY(-7px) rotate(-45deg);
-    }
-}
-
-
-/* =========================================
-   📱 CELULARES PEQUEÑOS
-   ========================================= */
-
-@media (max-width: 600px) {
-
-    .nav {
-        padding: 10px 14px;
-    }
-
-
-    .logo-img {
-        width: 70px;
-        max-width: 70px;
-    }
-
-
-    .brand strong {
-        font-size: 16px;
-    }
-
-
-    .brand small {
-        font-size: 5.5px;
-        letter-spacing: .7px;
-    }
-
-
-    .menu-toggle {
-        width: 44px;
-        height: 44px;
-    }
-
-
-    .navlinks {
-        left: 14px;
-        right: 14px;
-
-        top: calc(100% + 10px);
-    }
-}
-/* =========================
-   MENÚ HAMBURGUESA
-========================= */
+   MENÚ HAMBURGUESA NOVA TECH
+========================================= */
 
 .menu-toggle{
   display:none;
   width:46px;
   height:46px;
-  border:none;
-  background:transparent;
+  border:1px solid rgba(166,76,255,.6);
+  border-radius:14px;
+  background:rgba(123,44,255,.15);
   cursor:pointer;
+  padding:10px;
+
   flex-direction:column;
-  justify-content:center;
   align-items:center;
+  justify-content:center;
   gap:5px;
+
+  position:relative;
+  z-index:99999;
 }
 
 .menu-toggle span{
   display:block;
-  width:25px;
+  width:23px;
   height:3px;
-  border-radius:3px;
-  background:currentColor;
-  transition:0.3s;
+  background:white;
+  border-radius:5px;
+  transition:.3s ease;
 }
+
+
+/* =========================================
+   CELULAR
+========================================= */
 
 @media(max-width:900px){
 
   .nav{
-    position:relative;
+    position:relative !important;
+    z-index:99999 !important;
+
+    width:100%;
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -4696,40 +4430,106 @@ body.space > * {
 
   .menu-toggle{
     display:flex;
-    position:relative;
-    z-index:1001;
+    flex-shrink:0;
+    z-index:100000;
   }
 
+  /* MENÚ DESPLEGABLE */
+
   .navlinks{
-    position:absolute;
-    top:100%;
-    right:0;
-    width:220px;
-    padding:15px;
-    display:flex;
+    position:absolute !important;
+
+    top:calc(100% + 10px);
+    left:14px;
+    right:14px;
+
+    display:flex !important;
     flex-direction:column;
-    gap:8px;
-    background:inherit;
+    align-items:stretch;
+
+    gap:5px;
+
+    padding:14px;
+
+    background:#05030a !important;
+
+    border:1px solid rgba(166,76,255,.55);
+    border-radius:22px;
+
+    box-shadow:
+      0 20px 50px rgba(0,0,0,.7),
+      0 0 35px rgba(123,44,255,.18);
 
     opacity:0;
     visibility:hidden;
+    pointer-events:none;
+
     transform:translateY(-10px);
-    transition:0.3s;
-    z-index:1000;
+
+    transition:
+      opacity .25s ease,
+      transform .25s ease,
+      visibility .25s ease;
+
+    z-index:99998 !important;
   }
+
+  /* MENÚ ABIERTO */
 
   .navlinks.active{
     opacity:1;
     visibility:visible;
+    pointer-events:auto;
     transform:translateY(0);
   }
 
-  .navlinks a{
+  /* TODOS LOS ENLACES */
+
+  .navlinks a,
+  .navlinks a:not(.contact){
     display:block !important;
+
     width:100%;
+
+    padding:14px 16px;
+
+    color:#d6d0df !important;
+
+    font-size:16px;
+
+    text-decoration:none;
+
+    border-radius:12px;
+
+    position:relative;
+    z-index:99999;
   }
 
-  /* Animación del ☰ a ✕ */
+  .navlinks a:hover{
+    background:rgba(123,44,255,.15);
+    color:white !important;
+  }
+
+  /* BOTÓN HABLEMOS */
+
+  .navlinks .contact{
+    display:block !important;
+
+    width:100%;
+
+    margin-top:5px;
+
+    padding:14px 16px;
+
+    text-align:center;
+
+    border-radius:30px;
+
+    color:white !important;
+  }
+
+  /* ☰ → ✕ */
+
   .menu-toggle.active span:nth-child(1){
     transform:translateY(8px) rotate(45deg);
   }
@@ -4740,5 +4540,29 @@ body.space > * {
 
   .menu-toggle.active span:nth-child(3){
     transform:translateY(-8px) rotate(-45deg);
+  }
+}
+
+
+/* =========================================
+   CELULARES PEQUEÑOS
+========================================= */
+
+@media(max-width:600px){
+
+  .menu-toggle{
+    width:44px;
+    height:44px;
+  }
+
+  .navlinks{
+    left:14px;
+    right:14px;
+  }
+
+  .navlinks a,
+  .navlinks a:not(.contact){
+    font-size:15px;
+    padding:13px 15px;
   }
 }
