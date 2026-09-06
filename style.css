@@ -4447,12 +4447,12 @@ body.space > * {
     align-items:stretch;
     gap:5px;
     padding:14px;
-    background:#05030a !important;
+    background:#250847 !important;
     border:1px solid rgba(166,76,255,.55);
     border-radius:22px;
     box-shadow:
-      0 20px 50px rgba(0,0,0,.7),
-      0 0 35px rgba(123,44,255,.18);
+      0 20px 50px rgba(33, 0, 59, 0.7),
+      0 0 35px rgba(155, 102, 248, 0.18);
 
     opacity:0;
     visibility:hidden;
@@ -4557,131 +4557,4 @@ body.space > * {
     font-size:15px;
     padding:13px 15px;
   }
-}
-/* =========================================
-   AJUSTE FINAL PARA CELULAR
-========================================= */
-
-@media (max-width: 900px) {
-
-    .nav {
-        position: relative !important;
-        z-index: 99999 !important;
-    }
-
-    .menu-toggle {
-        display: flex !important;
-        position: relative;
-        z-index: 100000 !important;
-    }
-
-    .navlinks {
-        position: absolute !important;
-        top: calc(100% + 10px);
-        left: 14px;
-        right: 14px;
-
-        display: flex !important;
-        flex-direction: column;
-        gap: 5px;
-
-        padding: 14px;
-
-        background: #10051f !important;
-
-        border: 1px solid #8d3cff;
-        border-radius: 20px;
-
-        box-shadow: 0 20px 50px rgba(0,0,0,.7);
-
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
-
-        transform: translateY(-10px);
-
-        z-index: 99998 !important;
-    }
-
-    .navlinks.active {
-        opacity: 1;
-        visibility: visible;
-        pointer-events: auto;
-        transform: translateY(0);
-    }
-
-    .navlinks a,
-    .navlinks a:not(.contact) {
-        display: block !important;
-        width: 100%;
-        color: white !important;
-        padding: 14px 16px;
-        font-size: 16px;
-    }
-
-    .navlinks .contact {
-        display: block !important;
-        width: 100%;
-        background: linear-gradient(90deg, #8d3cff, #ef2348) !important;
-        color: white !important;
-        text-align: center;
-        margin-top: 5px;
-    }
-
-    /* CONTACTO EN CELULAR */
-
-    .page-hero {
-        min-height: auto !important;
-        padding: 55px 20px 45px !important;
-    }
-
-    .page-hero h1 {
-        font-size: 44px !important;
-        line-height: 1.05 !important;
-        letter-spacing: -2px !important;
-    }
-
-    .page-hero .lead {
-        font-size: 15px !important;
-        line-height: 1.6 !important;
-    }
-
-    .contact {
-        display: grid !important;
-        grid-template-columns: 1fr !important;
-        gap: 35px !important;
-        padding: 40px 20px !important;
-    }
-
-    .contact h2 {
-        font-size: 36px !important;
-        line-height: 1.1 !important;
-        letter-spacing: -1px !important;
-    }
-
-    .contact .lead {
-        font-size: 15px !important;
-    }
-}
-
-
-/* BOTÓN DEL FORMULARIO */
-
-.form .btn.primary {
-    background: linear-gradient(90deg, #8d3cff, #ef2348) !important;
-    color: white !important;
-
-    border: none !important;
-
-    box-shadow:
-        0 8px 25px rgba(141,60,255,.35),
-        0 0 15px rgba(239,35,72,.15);
-
-    padding: 15px 25px;
-    border-radius: 30px;
-}
-
-.form .btn.primary:hover {
-    background: linear-gradient(90deg, #a855ff, #ff3158) !important;
-    transform: translateY(-2px);
 }
