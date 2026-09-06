@@ -4505,6 +4505,21 @@ body.space > * {
   /* BOTÓN HABLEMOS */
 
   .navlinks .contact{
+    display:block !important;
+
+    width:100%;
+
+    margin-top:5px;
+
+    padding:14px 16px;
+
+    text-align:center;
+
+    border-radius:30px;
+
+    color:white !important;
+  }
+
   /* ☰ → ✕ */
 
   .menu-toggle.active span:nth-child(1){
@@ -4542,4 +4557,46 @@ body.space > * {
     font-size:15px;
     padding:13px 15px;
   }
+}
+/* =========================================
+   CORRECCIÓN BOTÓN HABLEMOS DEL MENÚ
+========================================= */
+
+@media (max-width: 900px) {
+
+    .navlinks .contact {
+        display: block !important;
+
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+
+        margin: 5px 0 0 0 !important;
+        padding: 14px 16px !important;
+
+        box-sizing: border-box !important;
+
+        text-align: center !important;
+
+        /* Evita que herede el diseño de la sección .contact */
+        grid-template-columns: none !important;
+        grid-template-rows: none !important;
+        gap: 0 !important;
+        align-items: center !important;
+
+        border-radius: 30px !important;
+
+        background: linear-gradient(
+            90deg,
+            #8d3cff,
+            #c62bbf,
+            #ef2348
+        ) !important;
+
+        color: white !important;
+
+        font-size: 16px !important;
+        line-height: 1.2 !important;
+    }
+
 }
