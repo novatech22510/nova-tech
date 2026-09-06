@@ -4573,23 +4573,17 @@ body.space > * {
         padding: 10px 20px;
         box-sizing: border-box;
         text-align: center;
+        background-color: #250847;
         /* Evita que herede el diseño de la sección .contact */
         grid-template-columns: none;
         grid-template-rows: none;
         gap: 0;
         align-items: center;
         border-radius: 30px;
-        background: #120027;
+        background: #220147;
         color: white !important;
         font-size: 15px !important;
         line-height: 1.2 !important;
     }
 
-}
-@media (max-width: 900px) {
-    .navlinks .contact {
-        background: #7c3aed !important;
-        background-image: none !important;
-        color: white !important;
-    }
 }
