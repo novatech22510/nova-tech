@@ -4579,10 +4579,17 @@ body.space > * {
         gap: 0;
         align-items: center;
         border-radius: 30px;
-        background: #1b0239;
+        background: #120027;
         color: white !important;
         font-size: 15px !important;
         line-height: 1.2 !important;
     }
 
+}
+@media (max-width: 900px) {
+    .navlinks .contact {
+        background: #7c3aed !important;
+        background-image: none !important;
+        color: white !important;
+    }
 }
