@@ -4573,7 +4573,7 @@ body.space > * {
         padding: 10px 20px;
         box-sizing: border-box;
         text-align: center;
-        background-color: #250847;
+        background-color: #35135c;
         /* Evita que herede el diseño de la sección .contact */
         grid-template-columns: none;
         grid-template-rows: none;
