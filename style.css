@@ -4571,17 +4571,15 @@ body.space > * {
         min-height: 0;
         margin: 5px 10 0;
         padding: 10px 20px;
-
         box-sizing: border-box;
         text-align: center;
-
         /* Evita que herede el diseño de la sección .contact */
         grid-template-columns: none;
         grid-template-rows: none;
         gap: 0;
         align-items: center;
         border-radius: 30px;
-        background: #26005c;
+        background: #1b0239;
         color: white !important;
         font-size: 15px !important;
         line-height: 1.2 !important;
